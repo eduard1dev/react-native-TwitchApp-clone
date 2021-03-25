@@ -3,4 +3,4 @@ Clone do app da Twitch utilizando React Native.
 
 # Working
 
-![](demo-TwitchClonegif)
+![](demo-TwitchClone.gif)
