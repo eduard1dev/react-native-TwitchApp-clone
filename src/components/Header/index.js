@@ -18,7 +18,7 @@ export default function Header(props){
             <TouchableOpacity style={{marginRight:25}}>
                 <MaterialIcons name='chat-bubble-outline' size={25}/>
             </TouchableOpacity>
-            <TouchableOpacity style={{marginRight:25}}>
+            <TouchableOpacity>
                 <MaterialIcons name='search' size={29}/>
             </TouchableOpacity>
         </View>

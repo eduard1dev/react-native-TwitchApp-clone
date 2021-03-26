@@ -8,7 +8,6 @@ import LiveContainer from '../../components/LiveContainer'
 import dataLive from '../../components/LiveContainer/data'
 
 export default function following(){
-
     return (
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false} stickyHeaderIndices={[1,3]}>
             <Text style={styles.title}>Following</Text>
@@ -22,7 +21,7 @@ export default function following(){
                 <Text style={styles.title2}>LIVE CHANNELS</Text>
             </View>
             <ScrollView style={{marginHorizontal:14}}>
-                {dataLive.map((item, index) => <LiveContainer key={index} name={item.name} thumb={item.thumb} source={item.icon} game={item.game} streamTitle={item.streamTitle} />)}
+                {dataLive.map((item, index) => <LiveContainer key={index} name={item.name} thumb={item.thumb} source={item.icon} game={item.game} streamTitle={item.streamTitle} views={item.views} tags={item.tags}/>)}
             </ScrollView>
         </ScrollView>
     )

@@ -2,12 +2,15 @@ import React from 'react'
 import { View, Text,Image, StyleSheet, ImageBackground, TouchableOpacity} from 'react-native'
 
 export default function LiveContainer(props){
+    const tags = props.tags
+    console.log(tags)
+
     return (
         <TouchableOpacity style={styles.container}>
             <ImageBackground style={styles.thumbContainer} source={props.thumb} resizeMode={'contain'}>
                 <View style={styles.containerStatus} >
                     <View style={styles.status}/>
-                    <Text style={styles.text2}>48.6K</Text>
+                    <Text style={styles.text2}>{props.views}</Text>
                 </View>
             </ImageBackground>
             <View style={{ justifyContent:'space-around', backgroundColor:'#FFF', marginLeft:16}}>
@@ -18,17 +21,19 @@ export default function LiveContainer(props){
                 <Text numberOfLines={1} style={styles.textNormal}>{props.streamTitle}</Text>
                 <Text style={styles.textNormal}>{props.game}</Text>
                 <View style={{flexDirection:'row'}}>
-                    <View style={styles.tag}>
-                        <Text style={styles.textTag}>Portuguese</Text>
-                    </View>
-                    <View style={styles.tag}>
-                        <Text style={styles.textTag}>Portuguese</Text>
-                    </View>
+                    {tags? tags.map((Item) => (
+                            <View style={styles.tag}>
+                                <Text style={styles.textTag}>{Item}</Text>
+                            </View> 
+                            )
+                        )
+                    :<Text></Text>}
                 </View>
             </View>
         </TouchableOpacity>
     )
 }
+
 
 const styles = StyleSheet.create({
     container:{
