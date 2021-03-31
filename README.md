@@ -1,5 +1,5 @@
 # react-native-TwitchApp-clone
-Clone do app da Twitch utilizando React Native.
+Clone do app da Twitch utilizando React Native + React Navigation.
 
 # Working
 
